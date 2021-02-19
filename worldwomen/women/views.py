@@ -9,3 +9,7 @@ def index(request):
 
 def categories(request, catid):
     return HttpResponse(f"<h1>Список...</h1><p>{catid}</p>")
+
+
+def archive(request, year):
+    return HttpResponse(f"<h1>Історія архіву ...</h1><p>{year}</p>")
