@@ -4,5 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('', index),  # http://127.0.0.1:8000/women/
-    path('cat/', categories),  # http://127.0.0.1:8000/women/cat
+    path('cat/<int:catid>/', categories),  # http://127.0.0.1:8000/cat/1/
 ]

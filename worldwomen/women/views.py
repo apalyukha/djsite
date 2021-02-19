@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("women...")
+    return HttpResponse("<h1>women...</h1>")
 
 
-def categories(request):
-    return HttpResponse("<h1>Список...</h1>")
+def categories(request, catid):
+    return HttpResponse(f"<h1>Список...</h1><p>{catid}</p>")

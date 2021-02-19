@@ -20,5 +20,5 @@ from women.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('women/', include('women.urls')),  # http://127.0.0.1:8000/cat/
+    path('', include('women.urls')),  # http://127.0.0.1:8000/cat/
 ]
