@@ -8,6 +8,12 @@ def index(request):
 
 
 def categories(request, catid):
+    if (request.GET):
+        print(request.GET)  # http://127.0.0.1:8000/cat/1/?name=GalGadot&type==actress
+
+    # if (request.POST):
+    #     print(request.POST)
+
     return HttpResponse(f"<h1>Список...</h1><p>{catid}</p>")
 
 
