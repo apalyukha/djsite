@@ -22,3 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('women.urls')),  # http://127.0.0.1:8000/cat/
 ]
+
+'''
+handler500 = Помилка сервера
+handler403 = у доступі відмовлено
+handler400 = неможливо опрацювати запит
+'''
+# опрацювання виключення:
+handler404 = pageNotFound
