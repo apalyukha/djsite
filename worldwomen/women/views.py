@@ -20,7 +20,7 @@ def categories(request, catid):
 def archive(request, year):
     if int(year) > 2021:
         # raise Http404
-        return redirect('home', permanent=True)
+        return redirect('home', permanent=False)
     # http://127.0.0.1:8000/archive/2021/
     return HttpResponse(f"<h1>Історія архіву ...</h1><p>{year}</p>")
 
