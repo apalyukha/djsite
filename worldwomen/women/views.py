@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h1>women...</h1>")
+    return render(request, 'women/index.html')
 
 
 def categories(request, catid):
