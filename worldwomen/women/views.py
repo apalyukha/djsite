@@ -1,11 +1,13 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
+from .models import *
 
 menu = ["Про сайт", "Добавити статтю", "Зворотній зв'язок", "Login"]
 
 
 def index(request):
-    return render(request, 'women/index.html', {'menu': menu, 'title': 'Головна сторінка'})
+    posts = Women.objects.all()
+    return render(request, 'women/index.html', {'posts': posts, 'menu': menu, 'title': 'Головна сторінка'})
 
 
 def about(request):
